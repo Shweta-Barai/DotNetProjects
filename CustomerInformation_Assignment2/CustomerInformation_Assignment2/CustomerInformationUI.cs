@@ -80,7 +80,12 @@ namespace CustomerInformation_Assignment2
             }
 
             price = priceText * Convert.ToInt32(orderQuantity.Text);
-            richTextBox1.Text = "Customer Name : " + customerName.Text + "\nCustomer Contact : " + customerContact.Text + "\nCustomer Address : " + customerAddress.Text + "\nCustomer Order : " + customerOrder.Text + "\nOrder Quantity : " + orderQuantity.Text + "\nTotal Price : " + price;
+            richTextBox1.Text = "Customer Name : " + customerName.Text + 
+                "\nCustomer Contact : " + customerContact.Text + 
+                "\nCustomer Address : " + customerAddress.Text + 
+                "\nCustomer Order : " + customerOrder.Text + 
+                "\nOrder Quantity : " + orderQuantity.Text + 
+                "\nTotal Price : " + price;
         }   
     }
 }
