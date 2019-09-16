@@ -41,11 +41,13 @@
             this.contactTextBox = new System.Windows.Forms.TextBox();
             this.customerTextBox = new System.Windows.Forms.TextBox();
             this.RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.addButton = new System.Windows.Forms.Button();
             this.customerGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // customerGroupBox
             // 
+            this.customerGroupBox.Controls.Add(this.addButton);
             this.customerGroupBox.Controls.Add(this.saveButton);
             this.customerGroupBox.Controls.Add(this.orderQuantity);
             this.customerGroupBox.Controls.Add(this.cutomerOrder);
@@ -167,6 +169,17 @@
             this.RichTextBox.Size = new System.Drawing.Size(342, 388);
             this.RichTextBox.TabIndex = 1;
             this.RichTextBox.Text = "";
+            this.RichTextBox.TextChanged += new System.EventHandler(this.RichTextBox_TextChanged);
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(164, 357);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 11;
+            this.addButton.Text = "add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // CustomerInfoUI
             // 
@@ -198,6 +211,7 @@
         private System.Windows.Forms.TextBox contactTextBox;
         private System.Windows.Forms.TextBox customerTextBox;
         private System.Windows.Forms.RichTextBox RichTextBox;
+        private System.Windows.Forms.Button addButton;
     }
 }
 

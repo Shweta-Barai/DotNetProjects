@@ -16,44 +16,124 @@ namespace PracticeAssignment2
         {
             InitializeComponent();
         }
-
+        
         private void saveButton_Click(object sender, EventArgs e)
         {
-            String name = customerTextBox.Text;
-            int contact = Convert.ToInt32(contactTextBox.Text);
-            String address = AddressTextBox.Text;
-            String order = orderTextBox.Text;
-            int quantity = Convert.ToInt32(quantityTextBox.Text);
+            const int size = 1;
 
-            int price = 0;
-            int orderValue = 0;
+            string[] customerName = new string[size];
+            int[] customerContact = new int[size];
+            string[] customerAddress = new string[size];
+            string[] customerOrder = new string[size];
+            int[] orderQuantity = new int[size];
+            int[] price = new int[size];
 
-            if (order == "Black")
+            for (int index = 0; index < size; index++)
             {
-                orderValue = 120;
-            }
-            else if (order == "Hold")
-            {
-                orderValue = 100;
-            }
-            else if (order == "Cold")
-            {
-                orderValue = 90;
-            }
-            else
-            {
-                orderValue = 80;
-            }
-
-            price = quantity * orderValue;
+                customerName[index] = customerTextBox.Text;
+                customerContact[index] = Convert.ToInt32(contactTextBox.Text);
+                customerAddress[index] = AddressTextBox.Text;
+                customerOrder[index] = orderTextBox.Text;
+                orderQuantity[index] = Convert.ToInt32(quantityTextBox.Text);
 
 
-            RichTextBox.Text = "Customer Name : " + name + 
-                "\nContact : " + contact + 
-                "\nAddress : " + address + 
-                "\nOrder : " + order + 
-                "\nQuantity : " + quantity + 
-                "\nTotal Price : " + price;
+                int orderValue = 0;
+
+                if (customerOrder[index] == "Black")
+                {
+                    orderValue = 120;
+                }
+                else if (customerOrder[index] == "Hold")
+                {
+                    orderValue = 100;
+                }
+                else if (customerOrder[index] == "Cold")
+                {
+                    orderValue = 90;
+                }
+                else
+                {
+                    orderValue = 80;
+                }
+
+                price[index] = orderQuantity[index] * orderValue;
+
+
+
+
+                RichTextBox.Text = RichTextBox.Text + "Customer Name : " + customerName[index] +
+                  "\nContact : " + customerContact[index] +
+                  "\nAddress : " + customerAddress[index] +
+                  "\nOrder : " + customerOrder[index] +
+                  "\nQuantity : " + orderQuantity[index] +
+                  "\nTotal Price : " + price[index] + "\n";
+
+            }
+
+        
+
+
+
+    }
+
+        private void RichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+        /*    const int size = 1;
+
+            string[] customerName = new string[size];
+            int[] customerContact = new int[size];
+            string[] customerAddress = new string[size];
+            string[] customerOrder = new string[size];
+            int[] orderQuantity = new int[size];
+            int[] price = new int[size];
+
+            for (int index = 0; index < size; index++)
+            {
+                customerName[index] = customerTextBox.Text;
+                customerContact[index] = Convert.ToInt32(contactTextBox.Text);
+                customerAddress[index] = AddressTextBox.Text;
+                customerOrder[index] = orderTextBox.Text;
+                orderQuantity[index] = Convert.ToInt32(quantityTextBox.Text);
+
+
+                int orderValue = 0;
+
+                if (customerOrder[index] == "Black")
+                {
+                    orderValue = 120;
+                }
+                else if (customerOrder[index] == "Hold")
+                {
+                    orderValue = 100;
+                }
+                else if (customerOrder[index] == "Cold")
+                {
+                    orderValue = 90;
+                }
+                else
+                {
+                    orderValue = 80;
+                }
+
+                price[index] = orderQuantity[index] * orderValue;
+
+
+
+
+                RichTextBox.Text = RichTextBox.Text + "Customer Name : " + customerName[index] +
+                  "\nContact : " + customerContact[index] +
+                  "\nAddress : " + customerAddress[index] +
+                  "\nOrder : " + customerOrder[index] +
+                  "\nQuantity : " + orderQuantity[index] +
+                  "\nTotal Price : " + price[index] + "\n";
+
+            }*/
+
+        } 
     }
 }
