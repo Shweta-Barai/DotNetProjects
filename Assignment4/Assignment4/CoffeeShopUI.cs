@@ -121,18 +121,23 @@ namespace Assignment4
 
 
         }
-        private void Reset()
-        {
-            nameTextBox.Text = " ";
-            contactTextBox.Text = " ";
-            addressTextBox.Text = " ";
-            quantityTextBox.Text = null;
-            orderTextBox.Text = "select One";
-            richTextBox.Text = " ";
-        }
+
         private void showButton_Click(object sender, EventArgs e)
         {
             ShowCustomer(0, customerName.Count);
+        }
+
+        private void ResetButton1_Click(object sender, EventArgs e)
+        {
+            private void Reset()
+            {
+                NameTextBox1.Text = " ";
+                ContactTextBox2.Text = " ";
+                AddressTextBox3.Text = " ";
+                QuantityTextBox5.Text = null;
+                OrderComboBox1.Text = "select One";
+                richTextBox1.Text = " ";
+            }
         }
     }
 }

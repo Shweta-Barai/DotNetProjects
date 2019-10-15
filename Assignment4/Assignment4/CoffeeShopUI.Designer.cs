@@ -43,11 +43,13 @@
             this.contactTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.ResetButton1 = new System.Windows.Forms.Button();
             this.customerGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // customerGroupBox
             // 
+            this.customerGroupBox.Controls.Add(this.ResetButton1);
             this.customerGroupBox.Controls.Add(this.label2);
             this.customerGroupBox.Controls.Add(this.label5);
             this.customerGroupBox.Controls.Add(this.label4);
@@ -190,6 +192,16 @@
             this.richTextBox.TabIndex = 1;
             this.richTextBox.Text = "";
             // 
+            // ResetButton1
+            // 
+            this.ResetButton1.Location = new System.Drawing.Point(31, 351);
+            this.ResetButton1.Name = "ResetButton1";
+            this.ResetButton1.Size = new System.Drawing.Size(75, 23);
+            this.ResetButton1.TabIndex = 14;
+            this.ResetButton1.Text = "Reset";
+            this.ResetButton1.UseVisualStyleBackColor = true;
+            this.ResetButton1.Click += new System.EventHandler(this.ResetButton1_Click);
+            // 
             // CoffeeShopUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +234,7 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button ResetButton1;
     }
 }
 
